@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-// reinstall axios
 import axios from 'axios'
-
-// correct route is '../styles/Home.css'
 import './styles/Home.css'
 
 class Home extends Component {
@@ -31,7 +28,6 @@ class Home extends Component {
 
         return (
             <div className='imgContainer'>
-                    {/* should be this.state.latestImg */}
                 <img src={this.props.latestImg} alt={this.state.latestAlt} title={this.state.latestTitle} className='latestImage' />
             </div>
         )

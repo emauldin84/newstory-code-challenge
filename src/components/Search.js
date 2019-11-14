@@ -21,7 +21,6 @@ class Home extends Component {
     
     handleSubmit = (e) => {
         e.preventDefault()
-        // should be axios.get
         axios.post(`https://xkcd.now.sh/?comic=${this.state.search}`)
         .then(response => {
             let img = response.data.img
@@ -43,7 +42,6 @@ class Home extends Component {
         let comicDisplay = this.state.img ? 
         <div className='comicContainer'>
             <h4>Comic #{this.state.number}: {this.state.alt}</h4>
-            {/* should be <img src=... */}
             <img href={this.state.img} alt={this.state.alt} title={this.state.title} className='searchImage' /> 
         </div>
         : null
@@ -57,7 +55,6 @@ class Home extends Component {
                         <button type="submit" className='searchSubmit'>submit</button>
                     </form>
                 </div>
-                {/* should be wrapped in {} */}
                 (comicDisplay)
     
             </div>
