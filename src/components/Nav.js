@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import '../styles/Nav.css'
 
 const Nav = () => {
-    return (
+    // wrap the following in a return or change the function {} to ()
         <div className='navBar'>
             <ul>
                 <Link to='/' className='latest'>Latest</Link>
@@ -12,7 +12,7 @@ const Nav = () => {
             </ul>
         </div>
 
-    )
+
 }
 
 export default Nav

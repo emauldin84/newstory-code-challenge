@@ -1,17 +1,17 @@
 import React from 'react';
-import { Route, Redirect, withRouter } from 'react-router-dom'
+                                            // should be 'react-router-dom'
+import { Route, Redirect, withRouter } from 'react-router'
 import './app.css'
 
-import Nav from './components/Nav'
-import Home from './components/Home'
-import Search from './components/Search'
+// import Nav, Home and Search from components files
 
 
 function App() {
   return (
     <div>
       <Nav />
-      <Route path='/' exact component={Home}/>
+                {/* add exact */}
+      <Route path='/' component={Home}/>
       <Route path='/search' component={Search}/>
       <Redirect to='/' />
 

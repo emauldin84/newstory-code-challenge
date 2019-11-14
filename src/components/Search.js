@@ -21,7 +21,8 @@ class Home extends Component {
     
     handleSubmit = (e) => {
         e.preventDefault()
-        axios.get(`https://xkcd.now.sh/?comic=${this.state.search}`)
+        // should be axios.get
+        axios.post(`https://xkcd.now.sh/?comic=${this.state.search}`)
         .then(response => {
             let img = response.data.img
             let alt = response.data.title
@@ -42,7 +43,8 @@ class Home extends Component {
         let comicDisplay = this.state.img ? 
         <div className='comicContainer'>
             <h4>Comic #{this.state.number}: {this.state.alt}</h4>
-            <img src={this.state.img} alt={this.state.alt} title={this.state.title} className='searchImage' /> 
+            {/* should be <img src=... */}
+            <img href={this.state.img} alt={this.state.alt} title={this.state.title} className='searchImage' /> 
         </div>
         : null
 
@@ -55,7 +57,8 @@ class Home extends Component {
                         <button type="submit" className='searchSubmit'>submit</button>
                     </form>
                 </div>
-                {comicDisplay}
+                {/* should be wrapped in {} */}
+                (comicDisplay)
     
             </div>
         )
