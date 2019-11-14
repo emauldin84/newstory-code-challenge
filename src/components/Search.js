@@ -35,6 +35,7 @@ class Home extends Component {
                 search: '',
             })
         })
+        .catch(err => err)
     }
 
     render() {
