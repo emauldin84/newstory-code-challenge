@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// reinstall axios
+// add axios to package.json
 import axios from 'axios'
 
 // correct route is '../styles/Home.css'
