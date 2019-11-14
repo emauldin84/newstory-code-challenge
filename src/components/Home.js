@@ -34,5 +34,5 @@ class Home extends Component {
 
     }
 }
-// should be export
+
 exports default Home
